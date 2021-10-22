@@ -22,3 +22,54 @@
 .a {
     text-align:center;
 }
+body{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+header{
+    background: #F5F5F5;
+    border: 10px;
+    padding: 40px;
+    height: 10px;
+    width: 1030px;
+}
+nav{
+    background:#fd0;
+    border: 10px;
+    padding: 40px;
+    height: 10px;
+    width: 1030px;
+}
+main{
+    background:#F5F5F5;
+    border: 10px;
+    padding: 40px;
+    height: 700px;
+    width: 1030px;
+}
+aside{
+    float: left;
+    margin: 1%;
+    background:#fd0;
+    border: 10px;
+    padding: 40px;
+    height: 500px;
+    width: 300px;
+}
+content{
+    float: right;
+    margin: 1%;
+    background:#fd0;
+    border: 10px;
+    padding: 40px;
+    height: 500px;
+    width: 500px;
+}
+footer{
+
+    background:#fd0;
+    border: 10px;
+    padding: 40px;
+    height: 100px;
+    width: 1030px;
+}
