@@ -1,3 +1,3 @@
 function Hello(){
-    alert("Приветб мир!");
+    alert("Привет, мир!");
 }
