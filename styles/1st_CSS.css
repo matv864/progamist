@@ -73,3 +73,20 @@ footer{
     height: 100px;
     width: 1030px;
 }
+div.container{
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows: repeat(3, 2fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    height: 130px;
+    background-color:#F5F5F5;
+    justify-items : center;
+    align-items: center;
+    align-content : center;
+    justify-content : center;
+}
+div.A{
+    background-color:#fd0;
+    padding: 4px;
+}
