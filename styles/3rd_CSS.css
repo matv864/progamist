@@ -5,8 +5,11 @@ body {
     height: 100vh;
 }
 p.g{
-    text-align: center;
-    margin-top: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: 1.5em Hind, sans-serif;
 }
 ul {
     text-align: center;
