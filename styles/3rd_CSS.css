@@ -10,6 +10,9 @@ p.g{
     left: 50%;
     transform: translate(-50%, -50%);
     font: 1.5em Hind, sans-serif;
+    background: linear-gradient(135deg, #f02fc2 0%, #6094ea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 ul {
     text-align: center;
