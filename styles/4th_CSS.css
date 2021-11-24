@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 body {
     width: 100%;
@@ -33,8 +32,8 @@ body {
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
+    width: calc(100% + 7px); /*размер*/
+    height: calc(100% + 7px);/*размер*/
     animation: glowing 20s linear infinite;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -65,14 +64,22 @@ body {
         background-position: 0 0;
     }
 }
-a {
+/*a {
     text-decoration: none;
     color: #fff;
-}
+}*/
 li {
     list-style-type: none;
     margin-bottom: 1em;
 }
 .a {
     color: #fff;
+    font-family: exo2;
+}
+@font-face 
+{
+    font-family: "exo2"; 
+    src: url("../fonts/anime-ace-v05.ttf") format("truetype"); 
+    font-style:normal; 
+    font-weight: normal; 
 }
