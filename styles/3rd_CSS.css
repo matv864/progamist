@@ -1,31 +1,48 @@
 * { margin: 0; padding: 0;}
-body {
+body{
     background-color: #f0f0f3;
-    width: 100vw;
-    height: 100vh;
 }
 p.g{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font: 1.5em Hind, sans-serif;
+    font: 1.5em Hind, sans-serif ;
     background: linear-gradient(135deg, #f02fc2 0%, #6094ea 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-ul {
-    text-align: center;
-}
-.neumorphism-box {
+div.neumorphism-box {
     position:absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 200px;
     height: 200px;
-
+    
     border-radius: 50px;
     background-color: #f0f0f3;
-    box-shadow: 10px 10px 21px #a3a3a6, -10px -10px 21px #fff;
+    box-shadow: 10px 10px 21px #d3d3d6, -10px -10px 21px #fff;
 }
+main.d {
+    width: 100%;
+    height: 80%;
+    /*background: linear-gradient(124deg,#ff304f,#581b98,#482ff7,#fc5185,#17b978,#ea5455,#2b1de8,#dd00f3,#dd00f3); */
+}
+header {
+    width: 100%;
+    height: 20%;
+}
+div.container{
+    display: grid;
+    grid-template-columns: repeat(3, calc(100%/3));
+    column-gap: 10px;
+    justify-items : center;
+    align-items: center;
+    align-content : center;
+    justify-content : center;
+}
+/*div.A{
+    background-color:#fd0;
+    padding: 4px;
+}*/
