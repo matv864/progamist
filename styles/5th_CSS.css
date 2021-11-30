@@ -5,9 +5,8 @@ body {
     }
 .neumorphism-box {
     position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 40%;
     width: 200px;
     height: 200px;
     border-radius: 50px;
@@ -15,7 +14,6 @@ body {
     box-shadow: 10px 10px 21px #d3d3d6, -10px -10px 21px #fff;
     -webkit-animation: pulsing 5s 1;
     animation: pulsing 5s 1;
-    animation-delay:2s
     }
     
     @-webkit-keyframes pulsing {
