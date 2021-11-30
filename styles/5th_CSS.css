@@ -3,37 +3,42 @@ body {
     display: flex;
     justify-content: center;
     }
+    p.g{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font: 1.5em Hind, sans-serif ;
+        background: linear-gradient(135deg, #f02fc2 0%, #6094ea 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 .neumorphism-box {
     position:absolute;
     top: 40%;
-    left: 40%;
+    left: 45%;
     width: 200px;
     height: 200px;
     border-radius: 50px;
-    background-color: #f0f0f3;
+    background-color: #ffffff;
     box-shadow: 10px 10px 21px #d3d3d6, -10px -10px 21px #fff;
-    -webkit-animation: pulsing 5s 1;
     animation: pulsing 5s 1;
     }
-    
-    @-webkit-keyframes pulsing {
-    0% {
-    -webkit-transform: scale(1.0, 1.0);
-    transform: scale(1.0, 1.0)
-    }
-    100% {
-    -webkit-transform: scale(2.0, 2.0);
-    transform: scale(2.0, 2.0);
-    }
-    }
-    
     @keyframes pulsing {
-    0% {
-    -webkit-transform: scale(1.0, 1.0);
-    transform: scale(1.0, 1.0)
-    }
-    100% {
-    -webkit-transform: scale(2.0, 2.0);
-    transform: scale(2.0, 2.0);
-    }
-    }
+        0% {
+        -webkit-transform: scale(1.0, 1.0);
+        transform: scale(1.0, 1.0)
+        }
+        10% {
+        -webkit-transform: scale(1.0, 1.0);
+        transform: scale(1.0, 1.0)
+        }
+        50% {
+            -webkit-transform: scale(2.0, 2.0);
+            transform: scale(2.0, 2.0)
+            }
+        100% {
+        -webkit-transform: scale(10, 10);
+        transform: scale(10, 10);
+        }
+        }
