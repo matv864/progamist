@@ -1,17 +1,19 @@
 body {
-    margin: 40px;
+    margin: 20px;
     display: flex;
     justify-content: center;
     }
-    p.g{
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font: 1.5em Hind, sans-serif ;
-        background: linear-gradient(135deg, #f02fc2 0%, #6094ea 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    pre {
+        position: relative;
+        left: 15%;
+        top: 8%;
+    }
+    div.g{
+        background-color: beige;
+        width: 50px;
+        height: 50px;
+        border-radius: 100000px;
+        animation: rotating 5s 1;
     }
 .neumorphism-box {
     position:absolute;
@@ -21,24 +23,46 @@ body {
     height: 200px;
     border-radius: 50px;
     background-color: #ffffff;
-    box-shadow: 10px 10px 21px #d3d3d6, -10px -10px 21px #fff;
-    animation: pulsing 5s 1;
+    box-shadow: 5.0px 5.0px 21px #d3d3d3, -5.0px -5.0px 21px #fff;
+    animation: pulsing 8s 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
     @keyframes pulsing {
         0% {
-        -webkit-transform: scale(1.0, 1.0);
-        transform: scale(1.0, 1.0)
+            -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5)
         }
-        10% {
-        -webkit-transform: scale(1.0, 1.0);
-        transform: scale(1.0, 1.0)
-        }
-        50% {
+        20% {
             -webkit-transform: scale(2.0, 2.0);
             transform: scale(2.0, 2.0)
             }
+        40% {
+            -webkit-transform: scale(4.0, 4.0);
+            transform: scale(4.0, 4.0)
+        }
+        60% {
+            -webkit-transform: scale(6.0, 6.0);
+            transform: scale(6.0, 6.0);
+        }
+        80% {
+            -webkit-transform: scale(8.0, 8.0);
+            transform: scale(8.0, 8.0);
+        }
         100% {
-        -webkit-transform: scale(10, 10);
-        transform: scale(10, 10);
+            -webkit-transform: scale(10.0, 10.0);
+            transform: scale(10.0, 10.0);
         }
         }
+    @keyframes rotating {
+        0% {
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+        50% {
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    }
+    
