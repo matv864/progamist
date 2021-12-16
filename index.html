@@ -6,8 +6,20 @@
         <title>Я ПРОГАММИСТ</title>
         <link rel="stylesheet" href="styles/3rd_CSS.css">
         <!--<script type="text/javascript" src="javascript/1st_JS.js"></script> -->
+        <script type="text/javascript">
+            /* <![CDATA[ */
+                function login(){
+                pass=prompt("Entrez le mot de passe / Enter password");
+                if ( pass == "123456azerty" ) {
+                    alert("+ флаг");  }
+                else {
+                    alert("Не угадал, попробуй ещё раз)");
+                }
+                }
+            /* ]]> */
+            </script>
     </head>
-    <body>
+    <body onload="login();">
         <header>
             <div class="container">
                 <div class="B"> 
