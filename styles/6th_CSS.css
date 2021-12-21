@@ -1,0 +1,21 @@
+.mouse_target{
+    height: 200px;
+    width: 600px;
+    background-color: aqua;
+}
+.mouse_click{
+    height: 200px;
+    width: 600px;
+    background-color: aqua;
+}
+.form_check{
+    height: 200px;
+    width: 600px;
+    background-color: aqua;
+}
+.button_click{
+    display: block;
+    margin: auto;
+    height: 50px;
+    width: 100px;
+}
