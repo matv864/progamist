@@ -14,13 +14,19 @@ function element_click(){
         console.log(3)
     }
 }
-function input_click() {
-    let element = document.querySelector(".form_check");
-    let style_bg = getComputedStyle(element).backgroundColor;
+let element = document.querySelector(".form_check");
+element.addEventListener('click', function(event) {
+    let style_bg = getComputedStyle(element).backgroundColor
     if(style_bg=="rgb(0, 255, 255)"){
         element.style.background="rgb(124,252,0)" 
     }
     else{
         element.style.background="rgb(0, 255, 255)"
     }
+})
+b_click.onclick = function() {
+    let element2 = document.querySelector(".button_click1");
+    let element3 = document.querySelector(".zoro");
+    element2.parentNode.removeChild(element2)
+    element3.parentNode.removeChild(element3)
 }
