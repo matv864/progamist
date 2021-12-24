@@ -30,3 +30,9 @@ b_click.onclick = function() {
     element2.parentNode.removeChild(element2)
     element3.parentNode.removeChild(element3)
 }
+var input = document.getElementById("input");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    alert(3);
+  }
+})
