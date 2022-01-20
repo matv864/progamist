@@ -36,3 +36,22 @@ input.addEventListener("keyup", function(event) {
     alert(3);
   }
 })
+
+const canvas = document.querySelector("canvas")
+const cnv = canvas.getContext("2d")
+cnv.beginPath()
+cnv.moveTo(0, 0)
+cnv.lineTo(600, 0)
+cnv.strokeStyle = 'white'
+cnv.lineWidth = 200
+//cnv.setLineDash([5, 1])
+cnv.stroke()
+cnv.closePath()
+cnv.beginPath()
+cnv.moveTo(0, 300)
+cnv.lineTo(600, 300)
+cnv.strokeStyle = 'red'
+cnv.lineWidth = 200
+//cnv.setLineDash([5, 1])
+cnv.stroke()
+cnv.closePath()
