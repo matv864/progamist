@@ -1,3 +1,7 @@
+x = Number(prompt())
+x = (Math.PI / 180) * x
+x = Math.tan(x)
+//alert(x)
 var counterVal = 0;
 function counter() {
     counterVal=counterVal+1
@@ -36,8 +40,7 @@ input.addEventListener("keyup", function(event) {
     alert(3);
   }
 })
-
-const canvas = document.querySelector("canvas")
+const canvas = document.querySelector(".second")
 const cnv = canvas.getContext("2d")
 cnv.beginPath()
 cnv.moveTo(0, 0)
@@ -55,3 +58,15 @@ cnv.lineWidth = 200
 //cnv.setLineDash([5, 1])
 cnv.stroke()
 cnv.closePath()
+
+const canv = document.querySelector(".third")
+const c = canv.getContext("2d")
+c.beginPath()
+c.moveTo(400, 400)
+c.lineTo(400, 200)
+c.lineTo(400, 400)
+var a = 200 / x
+c.lineTo(400 - a, 400)
+c.lineTo(400, 200)
+c.stroke()
+c.closePath()
