@@ -13,7 +13,7 @@ function zoro(){
     a5 + "<h3>x</h3>" + "+" +
     a6 + "=" + a7 + "<h1></h1>"
 
-  document.getElementById('result').innerHTML = ''
+
   document.getElementById('myform').hidden = true
   document.getElementById('button').hidden = true
 
