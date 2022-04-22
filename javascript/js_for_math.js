@@ -82,6 +82,10 @@ function zoro(){ //обработка на страницу проверки
   document.getElementById('my_form').hidden = true
   document.getElementById('check').hidden = false
   coef = coefing(a)
+  if(coef.length == 1){
+    no()
+    return 1
+  }
   eq = eqing(coef)
   equation = equationing(eq)
   document.getElementById('checking').innerHTML = equation
