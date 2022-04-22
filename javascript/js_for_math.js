@@ -1,32 +1,104 @@
-function zoro(){
-  a1 = document.myform.first.value
-  a2 = document.myform.second.value
-  a3 = document.myform.third.value
-  a4 = document.myform.fourth.value
-  a5 = document.myform.fifth.value
-  a6 = document.myform.sixth.value
-  a7 = document.myform.seventh.value
-  equation = a1 + "<h3>x<sup>5</sup></h3>" + "+" +
-    a2 + "<h3>x<sup>4</sup></h3>" + "+" +
-    a3 + "<h3>x<sup>3</sup></h3>" + "+" +
-    a4 + "<h3>x<sup>2</sup></h3>" + "+" +
-    a5 + "<h3>x</h3>" + "+" +
-    a6 + "=" + a7 + "<h1></h1>"
+let a //вводящаяся строчка ответов
+let coef //обработанные коэффициенты
+let eq //массив из слогаемых
+let equation // пользовательский вид уравнения
+let answer = 0 //ответ уравнение
 
 
-  document.getElementById('myform').hidden = true
-  document.getElementById('button').hidden = true
-
-  document.getElementById('question').hidden = false
-  document.getElementById('equation').innerHTML=equation
-  document.getElementById('but').hidden = false
+function coefing(s){ //преобразование коэффициентов в массив
+  s += " "
+  let result = []
+  let c = ""
+  for (var i of s ){
+    //if(typeof i == "number" || i == " "){
+      if(i == " " && c != ""){
+        result.push(c)
+        //console.log(c)
+        c = ""
+      }
+      else{
+        c += i
+      }
+    //}
+    
+  }
+  return result
 }
 
-function nami(){
-  document.getElementById('question').hidden = true
-  //document.getElementById('equation').innerHTML=""
-  document.getElementById('but').hidden = true
 
-  document.getElementById('result').innerHTML = "Решение твоего уравнения"
-  document.getElementById('result_equation').innerHTML= "твоё решение"
+function eqing(arr){ //преобразование в слогаемые
+  let len = arr.length
+  let counter = len - 1
+  let word = ''
+  let result = []
+  for(var i of arr){
+    if(counter > 1){
+      result.push(String(i) + "x<sup>" + counter + "</sup>")
+      counter -= 1
+    }
+    else{
+      if(counter == 1){
+        result.push(String(i) + "x")
+        counter -= 1
+      }
+      else{
+        result.push(String(i))
+      }
+    }
+  }
+  return result
+}
+
+
+function equationing(arr){ //преобразование в пользовательский вид
+  let result = ""
+  let first = false
+  for(var i of arr){
+    if(first){
+      result += " + "
+    }
+    else{
+      first = true
+    }
+    result += i
+  }
+  result += " = 0"
+  return result
+}
+
+
+function answering(arr){
+  let result = "результат"
+
+  return result
+}
+
+
+//дальше DOM
+
+
+function zoro(){ //обработка на страницу проверки
+  a = document.getElementById('form').value
+  document.getElementById('my_form').hidden = true
+  document.getElementById('check').hidden = false
+  coef = coefing(a)
+  eq = eqing(coef)
+  equation = equationing(eq)
+  document.getElementById('checking').innerHTML = equation
+}
+
+
+function no(){ //отказ от уравнения
+  document.getElementById('my_form').hidden = false
+  document.getElementById('check').hidden = true
+}
+
+
+function nami(){ //принятие уравнения и вывод ответа
+  document.getElementById('check').hidden = true
+  document.getElementById('result').hidden = false
+  document.getElementById('equation').innerHTML = equation
+  answer = answering(coef)
+  document.getElementById('answer').innerHTML = answer
+  
 }
