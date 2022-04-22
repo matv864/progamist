@@ -27,6 +27,6 @@ function nami(){
   //document.getElementById('equation').innerHTML=""
   document.getElementById('but').hidden = true
 
-  document.getElementById('result').hidden = false
+  document.getElementById('result').innerHTML = "Решение твоего уравнения"
   document.getElementById('result_equation').innerHTML= "твоё решение"
 }
