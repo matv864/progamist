@@ -3,9 +3,10 @@ let coef //обработанные коэффициенты
 let eq //массив из слогаемых
 let equation // пользовательский вид уравнения
 let answer = 0 //ответ уравнение
+let bool = true
 
 
-function coefing(s){ //преобразование коэффициентов в массив
+function coefing(s){ 
   s += " "
   let result = []
   let c = ""
@@ -25,10 +26,10 @@ function coefing(s){ //преобразование коэффициентов �
     
   }
   return result
-}
+} //преобразование коэффициентов в массив
 
 
-function eqing(arr){ //преобразование в слогаемые
+function eqing(arr){ 
   let len = arr.length
   let counter = len - 1
   let word = ''
@@ -49,10 +50,10 @@ function eqing(arr){ //преобразование в слогаемые
     }
   }
   return result
-}
+} //преобразование в слогаемые
 
 
-function equationing(arr){ //преобразование в пользовательский вид
+function equationing(arr){ 
   let result = ""
   let first = false
   for(var i of arr){
@@ -66,14 +67,15 @@ function equationing(arr){ //преобразование в пользоват�
   }
   result += " = 0"
   return result
-}
+} //преобразование в пользовательский вид
 
 
 function answering(arr){
   let result = "результат"
 
   return result
-}
+} //решение уравнения
+
 
 function checking(arr){
   if(arr.length <= 1){
@@ -88,7 +90,8 @@ function checking(arr){
   }
   
   return true
-}
+} //проверка вводимого
+
 
 //дальше DOM
 
@@ -100,6 +103,9 @@ function zoro(){ //обработка на страницу проверки
   coef = coefing(a)
   if(!checking(coef)){
     no()
+  }
+  else{
+    bool = false
   }
   eq = eqing(coef)
   equation = equationing(eq)
@@ -121,3 +127,19 @@ function nami(){ //принятие уравнения и вывод ответ�
   document.getElementById('answer').innerHTML = answer
   
 }
+
+//дальше события js
+
+function brook(event){
+  //console.log(event.code)
+  if(event.code == "Enter"){
+    if(bool){
+      zoro()
+    }
+    else{
+      nami()
+    }
+  }
+}
+
+window.addEventListener('keyup', brook)
