@@ -11,8 +11,10 @@ function coefing(s){ //преобразование коэффициентов �
   let c = ""
   for (var i of s ){
     //if(typeof i == "number" || i == " "){
-      if(i == " " && c != ""){
-        result.push(c)
+      if(i == " "){
+        if(c != ""){
+          result.push(c)
+        }
         //console.log(c)
         c = ""
       }
@@ -73,6 +75,20 @@ function answering(arr){
   return result
 }
 
+function checking(arr){
+  if(arr.length <= 1){
+    return false
+  }
+  for(var i of arr){
+    for(var j of i){
+      if(j < "0" || j > "9"){
+        return false
+      }
+    }
+  }
+  
+  return true
+}
 
 //дальше DOM
 
@@ -82,9 +98,8 @@ function zoro(){ //обработка на страницу проверки
   document.getElementById('my_form').hidden = true
   document.getElementById('check').hidden = false
   coef = coefing(a)
-  if(coef.length == 1){
+  if(!checking(coef)){
     no()
-    return 1
   }
   eq = eqing(coef)
   equation = equationing(eq)
