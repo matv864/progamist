@@ -38,7 +38,7 @@ function coefing(s){
 function zoro(){ //обработка на страницу проверки
   a = document.getElementById('form').value
   coef = coefing(a)
-  coef = coef.join(".")
+  coef = coef.join("H")
   console.log("alert")
   window.location.href = "https://mydjango.matv864.repl.co/" + coef + "/";
   
